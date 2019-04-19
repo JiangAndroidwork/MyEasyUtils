@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion easy.compileSdkVersion
     defaultConfig {
         applicationId "com.jiang.myeasyutils"
-        minSdkVersion 15
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion easy.minSdkVersion
+        targetSdkVersion easy.targetSdkVersion
+        versionCode easy.versionCode
+        versionName easy.versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
