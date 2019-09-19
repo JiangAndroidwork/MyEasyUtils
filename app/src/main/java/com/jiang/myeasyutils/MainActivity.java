@@ -12,7 +12,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.jiang.myeasyutils.activity.HVViewpagerActivity;
 import com.jiang.myeasyutils.activity.SlidingUpActivity;
+import com.jiang.myeasyutils.activity.VerticalViewPagerActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,26 +36,26 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
+        fab.setOnClickListener(view -> {
+            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
         });
         initView();
         initListener();
     }
 
     private void initListener() {
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
-                    case 0:
-                        SlidingUpActivity.start(view.getContext());
-                        break;
-                }
+        listView.setOnItemClickListener((parent, view, position, id) -> {
+            switch (position) {
+                case 0:
+                    SlidingUpActivity.start(view.getContext());
+                    break;
+                case 1:
+                    VerticalViewPagerActivity.start(view.getContext());
+                    break;
+                case 2:
+                    HVViewpagerActivity.start(view.getContext());
+                    break;
             }
         });
     }
@@ -61,8 +63,10 @@ public class MainActivity extends AppCompatActivity {
     private void initView() {
         List<String> titls = new ArrayList<>();
         titls.add("向上划出内容");
+        titls.add("竖直viewpager");
+        titls.add("横滑嵌套竖滑");
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,  android.R.layout.simple_list_item_1, titls);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, titls);
         listView.setAdapter(adapter);
     }
 
