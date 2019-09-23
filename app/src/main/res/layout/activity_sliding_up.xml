@@ -8,6 +8,7 @@
     android:gravity="bottom"
     sothree:umanoDragView="@+id/dragView"
     sothree:umanoOverlay="true"
+    sothree:umanoFadeColor="#00FFFFFF"
     sothree:umanoPanelHeight="180dp"
     sothree:umanoParallaxOffset="0dp"
     sothree:umanoScrollableView="@+id/list"

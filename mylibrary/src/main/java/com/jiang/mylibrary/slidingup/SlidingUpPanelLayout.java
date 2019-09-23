@@ -958,7 +958,6 @@ public class SlidingUpPanelLayout extends ViewGroup {
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         final int action = MotionEventCompat.getActionMasked(ev);
-
         if (!isEnabled() || !isTouchEnabled() || (mIsUnableToDrag && action != MotionEvent.ACTION_DOWN)) {
             mDragHelper.abort();
             return super.dispatchTouchEvent(ev);

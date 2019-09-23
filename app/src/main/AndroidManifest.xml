@@ -22,6 +22,7 @@
         <activity android:name=".activity.SlidingUpActivity" />
         <activity android:name=".activity.VerticalViewPagerActivity" />
         <activity android:name=".activity.HVViewpagerActivity" />
+        <activity android:name=".activity.CalendarActivity" />
     </application>
 
 </manifest>

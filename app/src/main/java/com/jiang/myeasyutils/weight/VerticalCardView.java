@@ -36,7 +36,6 @@ public class VerticalCardView extends FrameLayout {
         super(context);
         init();
     }
-
     public VerticalCardView(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init();

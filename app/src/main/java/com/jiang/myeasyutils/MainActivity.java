@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.jiang.myeasyutils.activity.CalendarActivity;
 import com.jiang.myeasyutils.activity.HVViewpagerActivity;
 import com.jiang.myeasyutils.activity.SlidingUpActivity;
 import com.jiang.myeasyutils.activity.VerticalViewPagerActivity;
@@ -56,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
                 case 2:
                     HVViewpagerActivity.start(view.getContext());
                     break;
+                case 3:
+                    CalendarActivity.start(view.getContext());
+                    break;
             }
         });
     }
@@ -65,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         titls.add("向上划出内容");
         titls.add("竖直viewpager");
         titls.add("横滑嵌套竖滑");
+        titls.add("往返时间选择");
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, titls);
         listView.setAdapter(adapter);
