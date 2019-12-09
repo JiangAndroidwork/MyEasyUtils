@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.jiang.myeasyutils.R;
+import com.jiang.myeasyutils.adapters.Test;
 import com.jiang.mylibrary.slidingup.SlidingUpPanelLayout;
 
 import java.util.Arrays;
@@ -21,6 +22,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import okio.GzipSource;
 
 /**
  * Created by hongliJiang on 2019/9/17 18:21
@@ -42,6 +44,7 @@ public class SlidingUpActivity extends Activity {
     public static void start(Context context) {
         Intent starter = new Intent(context, SlidingUpActivity.class);
         context.startActivity(starter);
+
     }
 
     @Override

@@ -23,6 +23,8 @@
         <activity android:name=".activity.VerticalViewPagerActivity" />
         <activity android:name=".activity.HVViewpagerActivity" />
         <activity android:name=".activity.CalendarActivity" />
+        <activity android:name=".activity.TwoViewPagerActivity" />
+        <activity android:name=".activity.TestAnimationActivity" />
     </application>
 
 </manifest>

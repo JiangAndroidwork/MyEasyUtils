@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.motion.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/montion_animation">
+
+    <com.jiang.mylibrary.wights.viewpager.LinkageViewPager
+        android:id="@+id/viewpager_head"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <View
+        android:clickable="true"
+        android:id="@+id/view_bg"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#fff"></View>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/con_sp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_bg"
+       >
+
+        <TextView
+            android:id="@+id/tv_de"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:text="徜徉在广阔无垠的风情南海，徜徉在广阔无垠的风情南海，徜徉在广阔无垠的风情南海，徜徉在广阔无垠的风情南海，徜徉在广阔无垠的风情南海"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <com.jiang.mylibrary.wights.viewpager.LinkageViewPager
+        android:id="@+id/viewpager_small"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"></com.jiang.mylibrary.wights.viewpager.LinkageViewPager>
+</android.support.constraint.motion.MotionLayout>

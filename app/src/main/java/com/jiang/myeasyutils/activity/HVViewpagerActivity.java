@@ -3,6 +3,7 @@ package com.jiang.myeasyutils.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 
 import com.jiang.myeasyutils.R;
 import com.jiang.myeasyutils.adapters.HVPagerAdapter;
@@ -45,6 +46,22 @@ public class HVViewpagerActivity extends BaseActivity {
         horizontalViewpager.setOffscreenPageLimit(list.size());
         horizontalViewpager.setPageTransformer(true, new HorizontalTransformer1(this));
         horizontalViewpager.setAdapter(mHVPagerAdapter);
+        horizontalViewpager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int i, float v, int i1) {
+
+            }
+
+            @Override
+            public void onPageSelected(int i) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int i) {
+
+            }
+        });
     }
 
     @Override
