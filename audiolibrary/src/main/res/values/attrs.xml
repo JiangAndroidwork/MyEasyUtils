@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LrcView">
+        <attr name="lrcTextSize" format="dimension" />
+        <attr name="lrcDividerHeight" format="dimension" />
+        <attr name="lrcNormalTextColor" format="reference|color" />
+        <attr name="lrcCurrentTextColor" format="reference|color" />
+        <attr name="lrcTimelineTextColor" format="reference|color" />
+        <attr name="lrcAnimationDuration" format="integer" />
+        <attr name="lrcLabel" format="string" />
+        <attr name="lrcPadding" format="dimension" />
+        <attr name="lrcTimelineColor" format="reference|color" />
+        <attr name="lrcTimelineHeight" format="dimension" />
+        <attr name="lrcPlayDrawable" format="reference" />
+        <attr name="lrcTimeTextColor" format="reference|color" />
+        <attr name="lrcTimeTextSize" format="dimension" />
+        <!--//滚动模式：word 高亮每一个字 line:一行一行高亮-->
+        <attr name="lrcMode" format="enum">
+            <enum name="WORD" value="1"/>
+            <enum name="LINE" value="0"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CorverLrcView">
+        <attr name="lrcCorverDividerHeight" format="dimension" />
+        <attr name="lrcCorverTextSizeBig" format="dimension" />
+        <attr name="lrcCorverTextSizeNormal" format="dimension" />
+        <attr name="lrcCorverMode" format="enum">
+            <enum name="EVERY_WORD" value="1"/>
+        </attr>
+        <attr name="hignLineColor" format="color|reference"/>
+        <attr name="lrcColor" format="color|reference"/>
+    </declare-styleable>
+</resources>
